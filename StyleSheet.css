@@ -1,0 +1,17 @@
+
+
+  body {
+    background-color:White;
+    border-inline: Black;
+  }
+  
+  h1 {
+    color:Black;
+    font-style: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  p {
+    color:gray;
+    font-size: 12pt;
+  }
