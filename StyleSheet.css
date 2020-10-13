@@ -1,46 +1,84 @@
 
 
+  html {
+    font-size: 62.5%;
+  }
+  
   body {
     background-color:White;
     border-inline: Black;
   }
-  
+
+
+
   h1 {
-    color:Black;
-    font-style: normal;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#ffffff;
+    font-style: Bold;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+  
   }
+  h2 {
+    color:#ffffff;
+    font-style: Bold;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+  }
+  
 
   p {
     color:black;
-    font-size: 12pt;
+    font-size: 2em;
   }
-  /* Add a black background color to the top navigation */
+   /* Photo properties*/
+  .top-header {
+    position: relative;
+    font-size: 2em;
+     margin:1em 1em 0 1em;
+   }
+
+    /* Text inside the header */
+.logo-name {
+  position: absolute;
+  border-width: 0.5em;
+  border-style: solid;
+  border-color: #ffffff;
+  padding-left: 1em;
+  padding-right: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
 .topnav {
-  background-color: black;
+  font-family: 'Roboto Slab', serif;
   overflow: hidden;
+
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-
-/* /* Change the color of links on hover
-.topnav a:hover {
-  background-color: gray;
+  align-content: center;
   color: black;
+  padding: 0.2em 0.8em;
+  text-align: justify;
+  text-decoration: none;
+  font-size: 1.3em;
+  margin: 2em;
 }
 
-/* Add a color to the active/current link 
+
+Change the color of links on hover
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+
+Add a color to the active/current link 
 .topnav a:active {
   background-color: white;
   color: black;
 } 
-*/
+
