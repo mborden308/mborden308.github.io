@@ -12,7 +12,7 @@
 
 
   h1 {
-    color:#ffffff;
+    color:#000;
     font-style: Bold;
     font-family: 'Roboto Slab', serif;
     text-align: center;
@@ -31,23 +31,25 @@
     font-size: 2em;
   }
    /* Photo properties*/
-  .top-header {
-    position: relative;
-    font-size: 2em;
-     margin:1em 1em 0 1em;
-   }
+.top-header {
+   position: relative;
+   margin:1em 1em 0 1em;
+}
 
     /* Text inside the header */
 .logo-name {
   position: absolute;
+  /*
   border-width: 0.5em;
   border-style: solid;
   border-color: #ffffff;
+  */
   padding-left: 1em;
   padding-right: 1em;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  
 }
 
 
@@ -55,30 +57,32 @@
 .topnav {
   font-family: 'Roboto Slab', serif;
   overflow: hidden;
-
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
   align-content: center;
-  color: black;
-  padding: 0.2em 0.8em;
-  text-align: justify;
-  text-decoration: none;
-  font-size: 1.3em;
-  margin: 2em;
+
 }
 
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    position: relative;
+    color: black;
+    padding: 0.2em 1em;
+    text-decoration: none;
+    font-size: 16px;
+    /*font-size: 1.3em;*/
+    margin: 0.5em;
+  }
 
-Change the color of links on hover
-.topnav a:hover {
-  background-color: black;
-  color: white;
-}
 
-Add a color to the active/current link 
-.topnav a:active {
-  background-color: white;
-  color: black;
-} 
+  /*Change the color of links on hover*/
+  .topnav a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  /*Add a color to the active/current link */
+  .topnav a:active {
+    background-color: white;
+    color: black;
+  } 
 
