@@ -57,13 +57,13 @@
 .topnav {
   font-family: 'Roboto Slab', serif;
   overflow: hidden;
-  align-content: center;
+  text-align: center;
 
 }
 
   /* Style the links inside the navigation bar */
   .topnav a {
-    float: left;
+    display: inline-block;
     position: relative;
     color: black;
     padding: 0.2em 1em;
@@ -85,4 +85,37 @@
     background-color: white;
     color: black;
   } 
+
+  /*Add gallery to homepage */
+  .gallery {
+    width: 100%;
+    margin: 3em auto; 
+  }
+
+  .gallery_main {
+    display: block;
+    margin: 0 auto;
+    width: 45em;
+    height: 30em;
+  
+  }
+
+
+  .gallery_main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+                0 6px 6px rgba(0, 0, 0, .23);
+  }
+
+  .gallery_previews img {
+    width: 10em;
+    height: 7em;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 1em;
+    cursor: pointer;
+  }
 
