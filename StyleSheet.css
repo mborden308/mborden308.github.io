@@ -3,6 +3,7 @@
 
   html {
     font-size: 62.5%;
+    margin: 1em;
   }
   
   body {
@@ -11,70 +12,70 @@
   }
 
 
-
   h1 {
     color:#000;
     font-style: Bold;
     font-family: 'Roboto Slab', serif;
     text-align: center;
-  
   }
+
   h2 {
     color:#ffffff;
     font-style: Bold;
     font-family: 'Roboto Slab', serif;
     text-align: center;
   }
-  
 
   p {
     color:black;
-    font-size: 2em;
+    font-size: 1em
   }
 
-  .aboutme {
-    color: black;
-    font-family: 'Roboto Slab', serif;
+span {
+  display: block;
+  width: 100%;
+  height: .75em;
+}
 
+.color-1 {
+  background-color: #122a4d;
+}
+
+.color-2 {
+    background-color: #1f4a89;
   }
 
-  .aboutme_box1 {
-    display: flex;
-    padding: 3em;
-  }
+.color-3 {
+  background-color: #2566c8;
+}
 
-  .aboutme_box1 img {
-    height: 100%;
-    margin: 10px;
-  }
 
-  .aboutme p  {
-    margin: 5px;
-  }
+
 
 
    /* Photo properties*/
 .top-header {
    position: relative;
-   margin:1em 1em 0 1em;
+   margin:1em 1em 1em 1em;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+   0 6px 6px rgba(0, 0, 0, .23);
 }
 
-    /* Text inside the header */
+.top-header img {
+  opacity: 50%;
+}
+
+  /* Text inside the header */
 .logo-name {
   position: absolute;
-  /*
-  border-width: 0.5em;
-  border-style: solid;
-  border-color: #ffffff;
-  */
-  padding-left: 1em;
-  padding-right: 1em;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  
 }
 
+.logo-name img {
+  opacity: 100%;
+}
 
 
 .topnav {
@@ -89,24 +90,23 @@
     display: inline-block;
     position: relative;
     color: black;
-    padding: 0.2em 1em;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.7em;
+    padding: 12px;
     /*font-size: 1.3em;*/
-    margin: 0.5em;
+    margin: 1em;
   }
 
 
   /*Change the color of links on hover*/
   .topnav a:hover {
-    background-color: black;
+    background-color: #122a4d;
     color: white;
   }
 
   /*Add a color to the active/current link */
   .topnav a:active {
     background-color: white;
-    color: black;
   } 
 
   /*Add gallery to homepage */
@@ -120,7 +120,6 @@
     margin: 0 auto;
     width: 45em;
     height: 30em;
-  
   }
 
 
@@ -143,28 +142,29 @@
   }
 
     /*Add blockquote to frontpage*/
-
     .testimonial-quote {
+      display: flex;
+      flex-direction: row wrap;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      font-size: 1em;
+      font-size: 2em;
   }
   
   .testimonial-quote blockquote {
       /* Negate theme styles */
       border: 0;
-      margin: 0;
       padding: 0;
-  
       background: none;
-      color: gray;
+      color: #1f4a89;
       font-family: Georgia, serif;
       font-size: 1.5em;
-      font-style: italic;
-      line-height: 1.4 !important;
-      margin: 0;
+      font-style: italic;   
+      line-height: 1.4 ;
       position: relative;
       text-shadow: 0 1px white;
       z-index: 600;
+      opacity: 90%;
   }
   
   .testimonial-quote blockquote * {
@@ -174,8 +174,9 @@
   }
   
   .testimonial-quote blockquote p {
-      color: #75808a; 
-      line-height: 1.4 !important;
+      color: #1f4a89; 
+      line-height: 1.4 ;
+      font-size: 1.5em;
   }
   
   .testimonial-quote blockquote p:first-child:before {
@@ -190,10 +191,31 @@
       text-shadow: none;
       z-index: -300;
   }
+
   .testimonial-quote {
     position: absolute; 
 }
 
-.testimonial-quote .quote-container {
-    padding-left: 3em; 
+.aboutme {
+  color: black;
+  font-family: 'Roboto Slab', serif;
+  display: flex;
+  flex-direction: row;
 }
+
+.aboutme_box1 {
+  padding: 3em;
+  
+}
+
+.aboutme_box1 img {
+  width: 100%;
+  margin: 10px;
+}
+
+.aboutme p  {
+  margin: 5px;
+  font-size: 2em;
+  font-stretch: extra-expanded;
+}
+
