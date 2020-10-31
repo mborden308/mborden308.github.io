@@ -1,6 +1,12 @@
 
 @import "compass/css3";
 
+:root {
+  --color1-blue: #122a4d;
+  --color2-blue: #2566c8;
+  --color3-blue: #2399dd;
+}
+
   html {
     font-size: 62.5%;
     margin: 1em;
@@ -8,7 +14,6 @@
   
   body {
     background-color:White;
-    border-inline: Black;
   }
 
 
@@ -31,34 +36,55 @@
     font-size: 1em
   }
 
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  padding-bottom: 3em;
+}
+
+.page-header-name {
+  flex-wrap: nowrap;
+}
+
 span {
   display: block;
   width: 100%;
   height: .75em;
 }
 
+.line {
+  margin-bottom: 2px;
+}
+
 .color-1 {
-  background-color: #122a4d;
+  background-color: var(--color1-blue);
 }
 
 .color-2 {
-    background-color: #1f4a89;
+    background-color:var(--color2-blue);
   }
 
 .color-3 {
-  background-color: #2566c8;
+  background-color: var(--color3-blue);
 }
 
-
-
+.white-line {
+  background-color: white;
+  height: .4em;
+}
 
 
    /* Photo properties*/
 .top-header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
    position: relative;
    margin:1em 1em 1em 1em;
-   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-   0 6px 6px rgba(0, 0, 0, .23);
+   box-shadow: 0 .6em 1.2em rgba(0, 0, 0, 0.19),
+   0 .6em .6em rgba(0, 0, 0, .23);
 }
 
 .top-header img {
@@ -82,16 +108,17 @@ span {
   font-family: 'Roboto Slab', serif;
   overflow: hidden;
   text-align: center;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
   /* Style the links inside the navigation bar */
   .topnav a {
-    display: inline-block;
     position: relative;
     color: black;
     text-decoration: none;
-    font-size: 1.7em;
+    font-size: 1.8em;
     padding: 12px;
     /*font-size: 1.3em;*/
     margin: 1em;
@@ -100,7 +127,7 @@ span {
 
   /*Change the color of links on hover*/
   .topnav a:hover {
-    background-color: #122a4d;
+    background-color: var(--color3-blue);
     color: white;
   }
 
@@ -108,8 +135,8 @@ span {
   .topnav a:active {
     background-color: white;
   } 
-
-  /*Add gallery to homepage */
+/**
+  /*Add gallery to homepage 
   .gallery {
     width: 100%;
     margin: 3em auto; 
@@ -140,13 +167,13 @@ span {
     margin: 1em;
     cursor: pointer;
   }
+**/
 
     /*Add blockquote to frontpage*/
     .testimonial-quote {
       display: flex;
       flex-direction: row wrap;
       justify-content: center;
-      align-items: center;
       text-align: center;
       font-size: 2em;
   }
@@ -196,6 +223,7 @@ span {
     position: absolute; 
 }
 
+/* ABOUT ME SECTION */
 .aboutme {
   color: black;
   font-family: 'Roboto Slab', serif;
@@ -211,11 +239,12 @@ span {
 .aboutme_box1 img {
   width: 100%;
   margin: 10px;
+  flex-grow: 2;
 }
 
 .aboutme p  {
   margin: 5px;
   font-size: 2em;
-  font-stretch: extra-expanded;
+
 }
 
