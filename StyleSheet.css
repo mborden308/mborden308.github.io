@@ -25,10 +25,11 @@
   }
 
   h2 {
-    color:#ffffff;
-    font-style: Bold;
+    color: var(--color2-blue);
+    font-style: italic;
     font-family: 'Roboto Slab', serif;
-    text-align: center;
+    text-align: left;
+    margin-left: 2em;
   }
 
   p {
@@ -41,12 +42,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  padding-bottom: 3em;
 }
 
-.page-header-name {
-  flex-wrap: nowrap;
+
+.page-header-name h1 {
+  margin: 0 10px;
+  width: max-content;
 }
+
 
 span {
   display: block;
@@ -79,7 +82,7 @@ span {
    /* Photo properties*/
 .top-header {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
    position: relative;
    margin:1em 1em 1em 1em;
@@ -106,9 +109,11 @@ span {
 
 .topnav {
   font-family: 'Roboto Slab', serif;
-  overflow: hidden;
-  text-align: center;
+  overflow: visible;
   display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  text-align: center;
   flex-direction: row;
   justify-content: center;
 }
@@ -118,24 +123,168 @@ span {
     position: relative;
     color: black;
     text-decoration: none;
-    font-size: 1.8em;
+    font-size: 16px;
     padding: 12px;
-    /*font-size: 1.3em;*/
-    margin: 1em;
+    text-align: center;
+    margin: 12px;
   }
 
 
-  /*Change the color of links on hover*/
-  .topnav a:hover {
-    background-color: var(--color3-blue);
+  /** CREATE GALLERY DROPDOWN IN NAVIGATION **/
+
+.dropdown, .dropdown-button {
+  position: relative;
+  display: inline-block;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+}
+
+.topnav a:hover, .dropdown:hover .dropdown-button {
+  background-color: var(--color2-blue);
     color: white;
+}
+
+.dropdown-links {
+  display: none;
+
+  position: absolute;
+  background-color: white;
+  min-width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid black;
+}
+
+.dropdown-links a {
+  color: black;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin: 2px;
+}
+
+.dropdown-links a:hover {
+  background-color: var(--color3-blue);
+}
+
+.dropdown:hover .dropdown-links {
+  display: block;
+}
+
+
+    /*Add blockquote to frontpage*/
+    .testimonial-quote {
+      display: flex;
+      flex-direction: row wrap;
+      justify-content: center;
+      text-align: center;
+      font-size: 2em;
+  }
+  
+  .testimonial-quote blockquote {
+      /* Negate theme styles */
+      border: 0;
+      padding: 0;
+      background: none;
+      color: var(--color2-blue);
+      font-family: Georgia, serif;
+      font-size: 1.5em;
+      font-style: italic;   
+      line-height: 1.4 ;
+      position: relative;
+      text-shadow: 0 1px white;
+      z-index: 600;
+      opacity: 90%;
+  }
+  
+  .testimonial-quote blockquote * {
+      box-sizing: border-box; 
+      width: 100%;
+      padding: 2px;
+  }
+  
+  .testimonial-quote blockquote p {
+      color: var(--color2-blue); 
+      line-height: 1.4 ;
+      font-size: 1.5em;
+  }
+  
+  .testimonial-quote blockquote p:first-child:before {
+      content: '\201C';
+      color: var(--color3-blue) ;
+      font-size: 7.5em;
+      font-weight: 700;
+      opacity: .3;
+      position: absolute;
+      top: -.4em;
+      left: .2em;    
+      text-shadow: none;
+      z-index: -300;
   }
 
-  /*Add a color to the active/current link */
-  .topnav a:active {
-    background-color: white;
-  } 
+  .testimonial-quote {
+    position: absolute; 
+}
+
+/* ABOUT ME SECTION */
+.aboutme-page {
+  color: black;
+  font-family: 'Roboto Slab', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.aboutme-page h2 {
+  margin: .5em 3em;
+}
+
+.aboutme-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.aboutme_photos {
+  margin: 1em;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme_text {
+  width: 80%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-right: 1em;
+}
+
+
 /**
+--------------------------------------
+.photo_gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.photo_gallery {
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+---------------------------------------
+
   /*Add gallery to homepage 
   .gallery {
     width: 100%;
@@ -168,83 +317,3 @@ span {
     cursor: pointer;
   }
 **/
-
-    /*Add blockquote to frontpage*/
-    .testimonial-quote {
-      display: flex;
-      flex-direction: row wrap;
-      justify-content: center;
-      text-align: center;
-      font-size: 2em;
-  }
-  
-  .testimonial-quote blockquote {
-      /* Negate theme styles */
-      border: 0;
-      padding: 0;
-      background: none;
-      color: #1f4a89;
-      font-family: Georgia, serif;
-      font-size: 1.5em;
-      font-style: italic;   
-      line-height: 1.4 ;
-      position: relative;
-      text-shadow: 0 1px white;
-      z-index: 600;
-      opacity: 90%;
-  }
-  
-  .testimonial-quote blockquote * {
-      box-sizing: border-box; 
-      width: 100%;
-      padding: 2px;
-  }
-  
-  .testimonial-quote blockquote p {
-      color: #1f4a89; 
-      line-height: 1.4 ;
-      font-size: 1.5em;
-  }
-  
-  .testimonial-quote blockquote p:first-child:before {
-      content: '\201C';
-      color: #288bb9;
-      font-size: 7.5em;
-      font-weight: 700;
-      opacity: .3;
-      position: absolute;
-      top: -.4em;
-      left: .2em;    
-      text-shadow: none;
-      z-index: -300;
-  }
-
-  .testimonial-quote {
-    position: absolute; 
-}
-
-/* ABOUT ME SECTION */
-.aboutme {
-  color: black;
-  font-family: 'Roboto Slab', serif;
-  display: flex;
-  flex-direction: row;
-}
-
-.aboutme_box1 {
-  padding: 3em;
-  
-}
-
-.aboutme_box1 img {
-  width: 100%;
-  margin: 10px;
-  flex-grow: 2;
-}
-
-.aboutme p  {
-  margin: 5px;
-  font-size: 2em;
-
-}
-
