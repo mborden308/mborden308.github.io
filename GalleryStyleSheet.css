@@ -1,0 +1,16 @@
+
+
+.photo_gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.photo_gallery {
+    margin: 6px;
+    padding: 6px;
+}
+
+
