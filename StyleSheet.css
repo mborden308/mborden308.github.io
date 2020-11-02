@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 }
 
 
@@ -50,27 +50,36 @@
   width: max-content;
 }
 
-
+.page-header 
+/*
 span {
   display: block;
   width: 100%;
   height: .75em;
 }
+*/
 
 .line {
   margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .color-1 {
   background-color: var(--color1-blue);
+  height: .75em;
 }
 
 .color-2 {
     background-color:var(--color2-blue);
+    height: .75em;
+    width: 100%;
   }
 
 .color-3 {
   background-color: var(--color3-blue);
+  height: .75em;
 }
 
 .white-line {
