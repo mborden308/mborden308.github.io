@@ -9,12 +9,16 @@
 
   html {
     font-size: 62.5%;
-    margin: 1em;
+    
   }
   
   body {
-    background-color:White;
+    background-image: url("Photos/homepage.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color: white; */
   }
+
 
 
   h1 {
@@ -91,11 +95,11 @@ span {
    /* Photo properties*/
 .top-header {
   display: flex;
-  flex-wrap: wrap;
+
   justify-content: center;
-   position: relative;
-   margin:1em 1em 1em 1em;
-   box-shadow: 0 .6em 1.2em rgba(0, 0, 0, 0.19),
+  position: relative;
+  margin: 1em;
+  box-shadow: 0 .6em 1.2em rgba(0, 0, 0, 0.19),
    0 .6em .6em rgba(0, 0, 0, .23);
 }
 
@@ -187,11 +191,13 @@ span {
 
     /*Add blockquote to frontpage*/
     .testimonial-quote {
+
       display: flex;
-      flex-direction: row wrap;
+      flex-direction: row wrap ;
       justify-content: center;
       text-align: center;
       font-size: 2em;
+ 
   }
   
   .testimonial-quote blockquote {
@@ -205,9 +211,10 @@ span {
       font-style: italic;   
       line-height: 1.4 ;
       position: relative;
-      text-shadow: 0 1px white;
+      text-shadow: 0 1px #575757;
       z-index: 600;
       opacity: 90%;
+ 
   }
   
   .testimonial-quote blockquote * {
@@ -217,15 +224,17 @@ span {
   }
   
   .testimonial-quote blockquote p {
-      color: var(--color2-blue); 
+      color: #731501; 
       line-height: 1.4 ;
       font-size: 1.5em;
+
+      
   }
   
   .testimonial-quote blockquote p:first-child:before {
       content: '\201C';
-      color: var(--color3-blue) ;
-      font-size: 7.5em;
+      color: #575757 ;
+      font-size: 5em;
       font-weight: 700;
       opacity: .3;
       position: absolute;
@@ -233,11 +242,11 @@ span {
       left: .2em;    
       text-shadow: none;
       z-index: -300;
+      height: 20px ;
+
   }
 
-  .testimonial-quote {
-    position: absolute; 
-}
+
 
 /* ABOUT ME SECTION */
 .aboutme-page {
