@@ -2,61 +2,80 @@
 @import "compass/css3";
 
 :root {
-  --color1-blue: #122a4d;
-  --color2-blue: #2566c8;
-  --color3-blue: #2399dd;
-  --accent1-maroon: #8a130b;
+  --color1: #00243f;
+  --color2: #264b77;
+  --color3: #3c5b74;
+  --color4: #a3acb1;
+  --accent1: #b67929;
 }
+
+
 
   html {
     font-size: 62.5%;
-    margin: 2em;
+    overflow-x: hidden;
+  }
+
+  body {
+      max-width: 100%;
+      height: 100%;
   }
   
 
   h1 {
     color:#000;
     font-style: Bold;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Playfair Display', serif;
     text-align: center;
+    font-size: 3em;
   }
 
   h2 {
-    color: var(--color2-blue);
+    color: var(--color2);
     font-style: italic;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Playfair Display', serif;
     text-align: left;
-
+    font-size: 2em;
   }
 
   p {
+    font-family: 'Montserrat', sans-serif;
     color:black;
     font-size: 1em
   }
+
+  .desktop {
+      display: flex;
+      flex-direction: column;
+  }
+
+
+.mobile {
+    display: none;
+}
 
 
 .page-header {
   display: flex;
   flex-direction: row;
-
-  align-items: baseline;
+  align-items: center;
 }
 
 .page-header-name {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .page-header-name h1 {
   margin: 0 3px;
   width: fit-content;
-  
 }
 
 .page-header-name ::first-letter {
   font-size: 2em;
-  color: var(--color2-blue);
-}
+  color: var(--color2);
+  }
 
   
 .line {
@@ -67,18 +86,18 @@
 }
 
 .color-1 {
-  background-color: var(--color1-blue);
+  background-color: var(--color1);
   height: .75em;
 }
 
 .color-2 {
-    background-color:var(--color2-blue);
+    background-color:var(--color2);
     height: .75em;
     width: 100%;
   }
 
 .color-3 {
-  background-color: var(--color3-blue);
+  background-color: var(--color3);
   height: .75em;
 }
 
@@ -87,40 +106,25 @@
   height: .4em;
 }
 
-
-
-/*
-.front-page {
-  display: flex;
-  flex-direction: row;
-  border: 2px solid lime;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: stretch;
-
-  height: 100%;
- 
+.color-4 {
+  background-color: var(--accent1);
+  height: .75em;
 }
-*/
+
+.front-page-photo {
+    margin: 1em auto;
+}
 
 .front-page-photo img {
   padding: 0;
-  display: block;
-  margin: 1em auto;
-  height: 100%;
-  max-width: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.19),
   0 10px 10px rgba(0, 0, 0, .5);
 }
 
 
-
-
 .topnav {
-  font-family: 'Roboto Slab', serif;
-  overflow: visible;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -134,7 +138,7 @@
     position: relative;
     color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 24px;
     padding: 12px;
     text-align: center;
     margin: 12px;
@@ -148,13 +152,13 @@
   display: inline-block;
   background-color: inherit;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 24px;
   padding: 12px;
   border: none;
 }
 
 .topnav a:hover, .dropdown:hover .dropdown-button {
-  background-color: var(--color2-blue);
+  background-color: var(--color2);
     color: white;
 }
 
@@ -178,12 +182,113 @@
 }
 
 .dropdown-links a:hover {
-  background-color: var(--color3-blue);
+  background-color: var(--color3);
 }
 
 .dropdown:hover .dropdown-links {
   display: block;
 }
+
+
+@media screen and (max-width: 768px) {
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .front-page-photo {
+        position: relative;
+        text-align: center;
+        margin: 0;
+    }
+   
+    .front-page-photo img {
+    box-shadow: none;
+    margin: 2px auto;
+    }
+
+    .front-page-photo h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        width: fit-content;
+        }
+
+    .front-page-photo img:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.19),
+        0 10px 10px rgba(0, 0, 0, .5);
+    }
+ 
+.dropdown-menu, .dropdown-button-menu {
+    position: relative;
+    display: inline-block;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 24px;
+    padding: 12px;
+    border: none;
+    color: var(--color2);
+  }
+  
+  .topnav a:hover, .dropdown-menu:hover .dropdown-button-menu {
+    background-color: var(--color2);
+    color: white;
+  }
+  
+  .dropdown-links-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid black;
+    
+  }
+  
+  .dropdown-links-menu a {
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin: 2px;
+    
+  }
+  
+  .dropdown-links-menu a:hover {
+    background-color: var(--color3);
+
+  }
+  
+  .dropdown-menu:hover .dropdown-links-menu {
+    display: block;
+
+  }
+
+  .dropdown-links a {
+    font-size: 12px;
+
+  }
+
+
+
+}
+
+
+
+
+
+
 
 
     /*Add blockquote to frontpage*/
@@ -202,8 +307,8 @@
       border: 0;
       padding: 0;
       background: none;
-      color: var(--color2-blue);
-      font-family: 'Roboto Slab', serif;
+      color: var(--color2);
+      
       font-size: 1.5em;
       font-style: italic;   
       line-height: 1.4 ;
@@ -221,7 +326,7 @@
   }
   
   .testimonial-quote blockquote p {
-      color: #731501; 
+      color: var(--accent1); 
       line-height: 1.4 ;
       font-size: 1.5em;
 
@@ -248,8 +353,7 @@
 /* ABOUT ME SECTION */
 .aboutme-page {
   color: black;
-  font-family: 'Roboto Slab', serif;
-  display: flex;
+   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 1.5em;
@@ -282,53 +386,3 @@
   margin-right: 1em;
 }
 
-
-/**
---------------------------------------
-.photo_gallery {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-
-.photo_gallery {
-  align-items: baseline;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
----------------------------------------
-
-  /*Add gallery to homepage 
-  .gallery {
-    width: 100%;
-    margin: 3em auto; 
-  }
-
-  .gallery_main {
-    display: block;
-    margin: 0 auto;
-    width: 45em;
-    height: 30em;
-  }
-
-
-  .gallery_main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 2em;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-                0 6px 6px rgba(0, 0, 0, .23);
-  }
-
-  .gallery_previews img {
-    width: 10em;
-    height: 7em;
-    object-fit: cover;
-    border-radius: 4px;
-    margin: 1em;
-    cursor: pointer;
-  }
-**/
