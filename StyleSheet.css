@@ -70,6 +70,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  
 }
 
 .page-header-name {
@@ -128,6 +129,7 @@
 }
 
 .front-page-photo img {
+  margin: 6px;
   padding: 0;
   width: 100%;
   height: auto;
@@ -143,17 +145,19 @@
   text-align: center;
   flex-direction: row;
   justify-content: center;
+  background-color: var(--color3);
 }
 
   /* Style the links inside the navigation bar */
   .topnav a {
     position: relative;
-    color: black;
+    color: white;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
-    padding: 12px;
     text-align: center;
     margin: 6px;
+    padding: 0 12px;
   }
 
 
@@ -163,14 +167,14 @@
   position: relative;
   display: inline-block;
   background-color: inherit;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
-  padding: 12px;
   border: none;
+  color: white;
 }
 
 .topnav a:hover, .dropdown:hover .dropdown-button {
-  background-color: var(--color2);
+  background-color: var(--accent1);
     color: white;
 }
 
@@ -185,8 +189,9 @@
 }
 
 .dropdown-links a {
-  color: black;
-  font-size: 12px;
+  color: var(--color1);
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -194,109 +199,13 @@
 }
 
 .dropdown-links a:hover {
-  background-color: var(--color3);
+  background-color: var(--accent1);
 }
 
 .dropdown:hover .dropdown-links {
   display: block;
 }
 
-
-@media screen and (max-width: 768px) {
-    .mobile {
-        display: block;
-    }
-    .desktop {
-        display: none;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
-    .homepage {
-      background-image: none;
-      overflow-y: scroll;
-    }
-
-    .front-page-photo {
-        position: relative;
-        text-align: center;
-        margin: 0;
-    }
-   
-    .front-page-photo img {
-    box-shadow: none;
-    margin: 2px auto;
-    }
-
-    .front-page-photo h2 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        width: fit-content;
-        }
-
-
-    .front-page-photo img:hover {
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.19),
-        0 10px 10px rgba(0, 0, 0, .5);
-    }
- 
-.dropdown-menu, .dropdown-button-menu {
-    position: relative;
-    display: inline-block;
-    background-color: inherit;
-    font-family: inherit;
-    font-size: 24px;
-    padding: 6px;
-    border: none;
-    color: var(--color2);
-  }
-  
-  .topnav a:hover, .dropdown-menu:hover .dropdown-button-menu {
-    background-color: var(--color2);
-    color: white;
-  }
-  
-  .dropdown-links-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: max-content;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border: 1px solid black;
-    
-  }
-  
-  .dropdown-links-menu a {
-    color: black;
-    font-size: 12px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    margin: 2px;
-  }
-  
-  .dropdown-links-menu a:hover {
-    background-color: var(--color3);
-  }
-  
-  .dropdown-menu:hover .dropdown-links-menu {
-    display: block;
-  }
-
-  .dropdown-links a {
-    font-size: 12px;
-  }
-
-
-
-}
 
 
 
@@ -367,10 +276,11 @@
    display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .aboutme-page h2 {
+  font-size: 1.5em;
   margin: .5em 3em;
 }
 
@@ -397,3 +307,116 @@
   margin-right: 1em;
 }
 
+.aboutme p::first-letter {
+  margin-left: 12px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .mobile {
+      display: block;
+  }
+  .desktop {
+      display: none;
+  }
+
+  body {
+      margin: 0;
+      padding: 0;
+  }
+
+  .homepage {
+    background-image: none;
+    overflow-y: scroll;
+  }
+
+  .front-page-photo {
+      position: relative;
+      text-align: center;
+      margin: 0;
+  }
+ 
+  .front-page-photo img {
+  box-shadow: none;
+  margin: 2px auto;
+  }
+
+  .front-page-photo h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      width: fit-content;
+      }
+
+
+  .front-page-photo img:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.19),
+      0 10px 10px rgba(0, 0, 0, .5);
+  }
+
+.dropdown-menu, .dropdown-button-menu {
+  position: relative;
+  display: inline-block;
+  background-color: inherit;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  border: none;
+  color: white;
+}
+
+.topnav a:hover, .dropdown-menu:hover .dropdown-button-menu {
+  background-color: var(--accent1);
+  color: white;
+}
+
+.dropdown-links-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 1px solid black;
+}
+
+.dropdown-links-menu a {
+  color: black;
+  font-size: 1.5em;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin: 6px;
+}
+
+.dropdown-links-menu a:hover {
+  background-color: var(--accent1);
+}
+
+.dropdown-menu:hover .dropdown-links-menu {
+  display: block;
+}
+
+.dropdown-links a {
+  font-size: 12px;
+}
+
+.aboutme-content {
+  flex-direction: column;
+}
+
+.aboutme_photos {
+  margin: 0;
+  max-width: 100%;
+}
+
+.aboutme_text {
+  margin-right: 0;
+  margin-left: 12px;
+  max-width: 90%;
+}
+
+}
