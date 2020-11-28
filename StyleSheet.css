@@ -61,6 +61,14 @@
     font-size: 24px;
   }
 
+  h3 {
+    color: var(--color3);
+    font-style: italic;
+    font-family: var(--font-secondary);
+    text-align: center;
+    font-size: 20px;
+  }
+
   p {
     font-family: var(--font-secondary);
     color:black;
@@ -575,12 +583,5 @@
       margin: 0;
       }
       
-      /**
-      .testimonial-quote blockquote p:last-child:after,  .testimonial-quote blockquote p:first-child:before {
-        display: none;
-      }
-  **/
-
-
 
 }
