@@ -55,7 +55,6 @@
 
   h2 {
     color: var(--color2);
-    font-style: italic;
     font-family: var(--font-main);
     text-align: left;
     font-size: 24px;
@@ -66,7 +65,16 @@
     font-style: italic;
     font-family: var(--font-secondary);
     text-align: center;
-    font-size: 20px;
+    font-size: 12px;
+  }
+
+  h5 {
+    color: var(--color3);
+    font-style: italic;
+    font-family: var(--font-secondary);
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
   }
 
   p {
@@ -394,14 +402,25 @@
   margin: 0;
 }
 
+.blog_post h4 {
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--accent2);
+  text-decoration: underline;
+  margin: 12px 0 0 0;
+}
 
 .blog_post p {
   text-overflow: wrap;
   max-width: 1000px;
   margin: auto;
-  font-size: 2rem;
-
+  font-size: 1.75rem;
+  padding-top: 12px;
+  text-indent: 3em;
+  color: var(--color2);
+  font-weight: bold;
 }
+
 
 .blog_quote {
   display: flex;
@@ -533,8 +552,6 @@
 .aboutme-content {
   flex-direction: column;
 }
-
-
 
 
 .aboutme_photos {
