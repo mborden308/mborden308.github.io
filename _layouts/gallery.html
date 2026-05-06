@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<div class="gallery-header">
+  <h1>{{ page.gallery_title }}</h1>
+  {% if page.gallery_description %}
+    <p>{{ page.gallery_description }}</p>
+  {% endif %}
+</div>
+
+{% assign gallery_slug = page.gallery_slug %}
+{% assign gallery = null %}
+{% for g in site.data.galleries %}
+  {% if g.slug == gallery_slug %}
+    {% assign gallery = g %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if gallery and gallery.photos.size > 0 %}
+  <div class="gallery-grid">
+    {% for photo in gallery.photos %}
+      <div class="gallery-item" 
+           onclick="openLightbox({{ forloop.index0 }}, '{{ gallery_slug }}')"
+           role="button"
+           tabindex="0"
+           aria-label="View {{ photo.alt | default: photo.filename }}"
+           onkeydown="if(event.key==='Enter')openLightbox({{ forloop.index0 }}, '{{ gallery_slug }}')">
+        <img src="{{ '/assets/images/gallery/' | append: gallery_slug | append: '/' | append: photo.filename | relative_url }}"
+             alt="{{ photo.alt | default: 'Landscape photograph' }}"
+             loading="lazy"
+             width="800"
+             height="600">
+        {% if photo.caption %}
+          <span class="gallery-caption">{{ photo.caption }}</span>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="gallery-empty">
+    <h2>Coming Soon</h2>
+    <p>New photographs are on their way. Check back soon.</p>
+  </div>
+{% endif %}

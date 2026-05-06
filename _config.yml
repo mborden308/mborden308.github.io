@@ -1,0 +1,45 @@
+# Site Settings
+title: Michael Borden Photography
+description: "Landscape and urban photography portfolio by Michael Borden"
+url: "https://michaelbordenphotography.com"
+baseurl: ""
+
+# Build Settings
+markdown: kramdown
+permalink: pretty
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections_dir: .
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - scripts
+  - README.md
+  - agent-instructions.md
+  - Photos
+  - "*.ps1"
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/images/hero/header1.jpg
+
+# Social
+social:
+  instagram: "#"
+  facebook: "#"
+  email: "hello@michaelbordenphotography.com"

@@ -1,0 +1,198 @@
+// ======================
+// Gallery Grid — Masonry via CSS Columns
+// ======================
+.gallery-header {
+  text-align: center;
+  padding: calc(#{$nav-height} + #{$space-2xl}) $space-lg $space-xl;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: $space-md;
+    letter-spacing: 0.05em;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: $color-text-muted;
+  }
+}
+
+.gallery-grid {
+  column-count: 1;
+  column-gap: $space-md;
+  padding: 0 $space-md $space-2xl;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @media (min-width: $bp-sm) {
+    column-count: 2;
+    padding: 0 $space-lg $space-2xl;
+  }
+
+  @media (min-width: $bp-lg) {
+    column-count: 3;
+  }
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: $space-md;
+  overflow: hidden;
+  border-radius: $border-radius;
+  cursor: pointer;
+  position: relative;
+
+  img {
+    width: 100%;
+    display: block;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    filter: brightness(0.9);
+  }
+
+  &:hover img {
+    transform: scale(1.03);
+    filter: brightness(1);
+  }
+
+  // Subtle overlay on hover
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.3) 0%,
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity $transition;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: $space-md;
+    color: $color-text;
+    font-size: 0.85rem;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity $transition, transform $transition;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &:hover .gallery-caption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ======================
+// Coming Soon (empty gallery)
+// ======================
+.gallery-empty {
+  text-align: center;
+  padding: $space-2xl $space-lg;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: $space-md;
+    color: $color-text-muted;
+  }
+
+  p {
+    color: $color-text-muted;
+    font-size: 1rem;
+  }
+}
+
+// ======================
+// Gallery Preview Cards (Homepage)
+// ======================
+.gallery-previews {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-lg;
+  padding: 0 $space-lg;
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @media (min-width: $bp-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.preview-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius;
+  aspect-ratio: 4 / 3;
+
+  @media (min-width: $bp-md) {
+    aspect-ratio: 3 / 4;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  .preview-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.1) 60%,
+      transparent 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: $space-lg;
+    transition: background $transition;
+  }
+
+  &:hover .preview-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.2) 60%,
+      transparent 100%
+    );
+  }
+
+  .preview-title {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    color: $color-text;
+    margin-bottom: $space-xs;
+  }
+
+  .preview-count {
+    font-size: 0.8rem;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
