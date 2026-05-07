@@ -1,9 +1,9 @@
 {
-  "albums": {
-    "The Great Outdoors": "the-great-outdoors",
-    "Office Space": "office-space",
-    "Wolf of Wall Street": "wolf-of-wall-street"
-  },
-  "renditionSize": "2048",
-  "thumbnailSize": "640"
+    "albums": {
+        "The Great Outdoors": "the-great-outdoors",
+        "Office Space": "office-space",
+        "Wolf of Wall Street": "wolf-of-wall-street"
+    },
+    "renditionSize": "2048",
+    "thumbnailSize": "640"
 }

@@ -2,79 +2,79 @@
 // Contact Page
 // ======================
 .contact-section {
-  padding: calc(#{$nav-height} + #{$space-2xl}) $space-lg $space-2xl;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  min-height: calc(100vh - #{$nav-height});
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    padding: calc(#{$nav-height} + #{$space-2xl}) $space-lg $space-2xl;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: calc(100vh - #{$nav-height});
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-heading {
-  font-size: 2.5rem;
-  margin-bottom: $space-md;
+    font-size: 2.5rem;
+    margin-bottom: $space-md;
 }
 
 .contact-subtext {
-  font-size: 1.1rem;
-  color: $color-text-muted;
-  margin-bottom: $space-xl;
-  line-height: 1.7;
+    font-size: 1.1rem;
+    color: $color-text-muted;
+    margin-bottom: $space-xl;
+    line-height: 1.7;
 }
 
 // ======================
 // Social Links
 // ======================
 .social-links {
-  display: flex;
-  justify-content: center;
-  gap: $space-xl;
-  margin-bottom: $space-xl;
+    display: flex;
+    justify-content: center;
+    gap: $space-xl;
+    margin-bottom: $space-xl;
 }
 
 .social-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: $space-sm;
-  color: $color-text-muted;
-  transition: color $transition;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-sm;
+    color: $color-text-muted;
+    transition: color $transition;
 
-  &:hover {
-    color: $color-accent;
-  }
+    &:hover {
+        color: $color-accent;
+    }
 
-  svg {
-    width: 32px;
-    height: 32px;
-    fill: currentColor;
-  }
+    svg {
+        width: 32px;
+        height: 32px;
+        fill: currentColor;
+    }
 
-  span {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+    span {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
 }
 
 // ======================
 // Email Link
 // ======================
 .contact-email {
-  margin-top: $space-lg;
-  padding-top: $space-lg;
-  border-top: 1px solid $color-border;
+    margin-top: $space-lg;
+    padding-top: $space-lg;
+    border-top: 1px solid $color-border;
 
-  a {
-    font-size: 1.1rem;
-    color: $color-accent;
-    letter-spacing: 0.05em;
-    transition: color $transition;
+    a {
+        font-size: 1.1rem;
+        color: $color-accent;
+        letter-spacing: 0.05em;
+        transition: color $transition;
 
-    &:hover {
-      color: $color-text;
+        &:hover {
+            color: $color-text;
+        }
     }
-  }
 }

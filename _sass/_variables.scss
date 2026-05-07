@@ -1,44 +1,44 @@
 // ======================
 // Color Palette — Dark/Moody
 // ======================
-$color-bg:          #0d0d0d;
-$color-surface:     #1a1a1a;
+$color-bg: #0d0d0d;
+$color-surface: #1a1a1a;
 $color-surface-alt: #252525;
-$color-border:      #333;
-$color-text:        #f0f0f0;
-$color-text-muted:  #999;
-$color-accent:      #4a7fb5;   // dark blue accent
-$color-overlay:     rgba(0, 0, 0, 0.92);
+$color-border: #333;
+$color-text: #f0f0f0;
+$color-text-muted: #999;
+$color-accent: #6bb5e8; // blue accent
+$color-overlay: rgba(0, 0, 0, 0.92);
 
 // ======================
 // Typography
 // ======================
 $font-heading: 'Playfair Display', Georgia, serif;
-$font-body:    'Lato', 'Helvetica Neue', Arial, sans-serif;
-$font-size-base: 1rem;      // 16px
+$font-body: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 1rem; // 16px
 
 // ======================
 // Spacing Scale
 // ======================
-$space-xs:  0.25rem;   // 4px
-$space-sm:  0.5rem;    // 8px
-$space-md:  1rem;      // 16px
-$space-lg:  2rem;      // 32px
-$space-xl:  3rem;      // 48px
-$space-2xl: 5rem;      // 80px
+$space-xs: 0.25rem; // 4px
+$space-sm: 0.5rem; // 8px
+$space-md: 1rem; // 16px
+$space-lg: 2rem; // 32px
+$space-xl: 3rem; // 48px
+$space-2xl: 5rem; // 80px
 
 // ======================
 // Breakpoints
 // ======================
-$bp-sm:  576px;
-$bp-md:  768px;
-$bp-lg:  1024px;
-$bp-xl:  1200px;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1200px;
 
 // ======================
 // Misc
 // ======================
-$nav-height:    70px;
-$transition:    0.3s ease;
+$nav-height: 70px;
+$transition: 0.3s ease;
 $border-radius: 4px;
-$max-width:     1400px;
+$max-width: 1400px;

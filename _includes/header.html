@@ -1,42 +1,48 @@
 <header class="site-header" role="banner">
-  <nav class="nav-container" aria-label="Main navigation">
-    <a href="{{ '/' | relative_url }}" class="site-title">Michael Borden Photography</a>
+    <nav class="nav-container" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}" class="site-title">Michael Borden Photography</a>
 
-    <!-- Desktop Nav -->
-    <ul class="nav-links">
-      <li><a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a></li>
-      <li class="nav-dropdown" id="galleryDropdown">
-        <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">Galleries</button>
-        <div class="dropdown-menu" role="menu">
-          <a href="{{ '/the-great-outdoors/' | relative_url }}" class="dropdown-item" role="menuitem">The Great Outdoors</a>
-          <a href="{{ '/office-space/' | relative_url }}" class="dropdown-item" role="menuitem">Office Space</a>
-          <a href="{{ '/wolf-of-wall-street/' | relative_url }}" class="dropdown-item" role="menuitem">Wolf of Wall Street</a>
-        </div>
-      </li>
-      <li><a href="{{ '/about/' | relative_url }}" class="nav-link{% if page.url == '/about/' %} active{% endif %}">About</a></li>
-      <li><a href="{{ '/contact/' | relative_url }}" class="nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
-    </ul>
+        <!-- Desktop Nav -->
+        <ul class="nav-links">
+            <li><a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
+            </li>
+            <li class="nav-dropdown" id="galleryDropdown">
+                <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">Galleries</button>
+                <div class="dropdown-menu" role="menu">
+                    <a href="{{ '/the-great-outdoors/' | relative_url }}" class="dropdown-item" role="menuitem">The
+                        Great Outdoors</a>
+                    <a href="{{ '/office-space/' | relative_url }}" class="dropdown-item" role="menuitem">Office
+                        Space</a>
+                    <a href="{{ '/wolf-of-wall-street/' | relative_url }}" class="dropdown-item" role="menuitem">Wolf of
+                        Wall Street</a>
+                </div>
+            </li>
+            <li><a href="{{ '/about/' | relative_url }}"
+                    class="nav-link{% if page.url == '/about/' %} active{% endif %}">About</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}"
+                    class="nav-link{% if page.url == '/contact/' %} active{% endif %}">Contact</a></li>
+        </ul>
 
-    <!-- Mobile Hamburger -->
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+        <!-- Mobile Hamburger -->
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
 </header>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-  <a href="{{ '/' | relative_url }}" class="mobile-link">Home</a>
-  <div class="mobile-divider"></div>
-  <span class="mobile-link">Galleries</span>
-  <div class="mobile-sub-links">
-    <a href="{{ '/the-great-outdoors/' | relative_url }}" class="mobile-sub-link">The Great Outdoors</a>
-    <a href="{{ '/office-space/' | relative_url }}" class="mobile-sub-link">Office Space</a>
-    <a href="{{ '/wolf-of-wall-street/' | relative_url }}" class="mobile-sub-link">Wolf of Wall Street</a>
-  </div>
-  <div class="mobile-divider"></div>
-  <a href="{{ '/about/' | relative_url }}" class="mobile-link">About</a>
-  <a href="{{ '/contact/' | relative_url }}" class="mobile-link">Contact</a>
+    <a href="{{ '/' | relative_url }}" class="mobile-link">Home</a>
+    <div class="mobile-divider"></div>
+    <span class="mobile-link">Galleries</span>
+    <div class="mobile-sub-links">
+        <a href="{{ '/the-great-outdoors/' | relative_url }}" class="mobile-sub-link">The Great Outdoors</a>
+        <a href="{{ '/office-space/' | relative_url }}" class="mobile-sub-link">Office Space</a>
+        <a href="{{ '/wolf-of-wall-street/' | relative_url }}" class="mobile-sub-link">Wolf of Wall Street</a>
+    </div>
+    <div class="mobile-divider"></div>
+    <a href="{{ '/about/' | relative_url }}" class="mobile-link">About</a>
+    <a href="{{ '/contact/' | relative_url }}" class="mobile-link">Contact</a>
 </div>
