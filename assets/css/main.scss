@@ -1,4 +1,7 @@
---- # Main SCSS entry point — Jekyll processes this file --- @import "variables";
+---
+# Main SCSS entry point — Jekyll processes this file
+---
+@import "variables";
 @import "base";
 @import "nav";
 @import "layout";
